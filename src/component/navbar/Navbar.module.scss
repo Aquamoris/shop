@@ -1,0 +1,58 @@
+$links_width: 60%;
+$logo_and_order_width: calc((100% - $links_width) / 2);
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: $logo_and_order_width;
+  transition: 1s;
+  text-transform: uppercase;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.nav {
+  width: $links_width;
+}
+
+.order {
+  width: $logo_and_order_width;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navItem {
+  position: relative;
+  float: left;
+  padding: 0 15px;
+  a {
+    display: block;
+  }
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark_main);
+    display: initial;
+  }
+  &:hover > .dropNav {
+    display: initial;
+  }
+}
+
+.dropNav {
+  position: absolute;
+  left: 0;
+  background-color: var(--white);
+  color: var(--main);
+  display: none;
+  li {
+    width: 100%;
+  }
+  li > a {
+    font-weight: 600;
+  }
+}

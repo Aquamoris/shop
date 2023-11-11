@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+
+$header_height: 60px;
+$navbar_height: 150px;
+$base_font_size_button: 16px;
+
+:root {
+  --main: #6E6E6E;
+  --dark_main: #383838;
+  --contrast: #BAFF39;
+  --white: #FFFFFF;
+  --black: #1D1D1;
+}
+
+body, html {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+*, *:after, *:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  color: var(--white);
+}
+
+.Header {
+  background-color: var(--dark_main);
+  height: $header_height;
+  width: 100%;
+}
+
+.Navbar {
+  background-color: var(--main);
+  height: $navbar_height;
+  width: 100%;
+}
+
+.App {
+  background-color: var(--main);
+  min-height: 100vh;
+}
+
+.button {
+  background-color: var(--dark_main);
+  color: var(--white);
+  font-size: $base_font_size_button;
+  padding: calc($base_font_size_button / 2) $base_font_size_button;
+  border: 0;
+}
+
+.contrastButton {
+  @extend .button;
+  background-color: var(--contrast);
+  color: var(--dark_main);
+}
